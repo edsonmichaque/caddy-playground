@@ -1,7 +1,8 @@
-reverse_proxy :8080 {
-	to https://10.204.30.5
-	
-	transport {
-		tls_insecure_skip_verify
+localhost:8080 {
+	reverse_proxy https://10.204.30.5 { 
+		transport {
+			tls_insecure_skip_verify
+		}
 	}
 }
+
